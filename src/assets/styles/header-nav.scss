@@ -1,0 +1,56 @@
+.header {
+
+  &__nav {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    column-gap: 40px;
+  }
+
+  &__nav-elem {
+    padding: 2.5px 10px;
+    flex: 0 0 auto;
+    border-radius: 34px;
+    line-height: 19px;
+    color: $mainTextColor;
+
+    &:hover {
+      background: $grayOnWhite;
+    }
+  }
+
+  &__nav-control {
+    position: absolute;
+    z-index: 42;
+    top: 0;
+    background-color: #ffffff;
+
+    z-index: 42;
+    width: 20px;
+    height: 24px;
+    background-image: url('./assets/images/arrowRight.svg');
+    background-repeat: no-repeat;
+
+    &.control-right {
+      background-image: url('./assets/images/arrowRight.svg');
+      background-position: 0 50%;
+      box-shadow: -9px 0 15px 5px #ffffff;
+
+      right: 0;
+    }
+
+    &.control-left {
+      background-image: url('./assets/images/arrowLeft.svg');
+      background-position: 50% 50%;
+      box-shadow: -9px 0 15px 5px #ffffff;
+
+      left: 0;
+    }
+  }
+}

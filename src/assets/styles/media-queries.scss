@@ -1,0 +1,57 @@
+@media screen and (max-width: 750px) {
+  .header {
+    padding: 16px 0;
+
+    &__menu-burger {
+      display: block;
+    }
+
+    &__logo {
+      margin-right: 0;
+      text-align: center;
+    }
+
+    &__city,
+    &__search,
+    &__profile {
+      display: none;
+    }
+
+    &__favorites {
+      display: flex;
+      margin-left: 0;
+      margin-right: 8px;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+
+    &__city {
+      margin-right: 15px;
+    }
+
+    &__search {
+      min-width: 415px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+
+    &__favorites {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+
+    &__profile {
+      display: none;
+    }
+  }
+}
