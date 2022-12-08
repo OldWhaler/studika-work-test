@@ -16,6 +16,37 @@
     <header class="header">
       <div class="header__row">
 
+        <div class="cities-list hidden">
+          <input type="text" class="cities-list__input" placeholder="Регион, город, населенный пункт">
+
+          <div class="cities-selected">
+            <ul class="cities-selected__list">
+
+              <li class="cities-selected__elem">
+                <span class="cities-selected__elem-text">Название</span>
+                <button class="cities-selected__elem-icon"></button>
+              </li>
+
+              <li class="cities-selected__elem">
+                <span class="cities-selected__elem-text">Название</span>
+                <button class="cities-selected__elem-icon"></button>
+              </li>
+
+            </ul>
+          </div>
+
+          <ul class="cities-list__list">
+            <li class="cities-list__elem">Московская область</li>
+            <li class="cities-list__elem">Вся Россия</li>
+            <li class="cities-list__elem">Санкт-Петербург</li>
+            <li class="cities-list__elem">Новосибирск</li>
+            <li class="cities-list__elem">Екатеринбург</li>
+          </ul>
+
+          <button class="cities-list__btn cities-list__btn_active">сохранить</button>
+
+        </div>
+
         <div class="header__menu-burger"></div>
 
         <object class="header__logo" data="./images/logo.svg" type="image/svg+xml"></object>
