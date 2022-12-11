@@ -1,0 +1,171 @@
+@import './variables.scss';
+@import './animations.scss';
+
+
+.cities-popup {
+  position: absolute;
+  z-index: 42;
+  top: 56px;
+  left: 104px;
+  width: 384px;
+  padding-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fbfbfb;
+  box-shadow: 0px 7px 38px rgba(44, 62, 106, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+
+  animation: citiesPopup 500ms;
+
+  &__input-label{
+    position:absolute;
+    top: 41px;
+    right: 33px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background: transparent url('./assets/images/close.svg') center no-repeat;
+  }
+
+  &__input {
+    margin: 0 16px;
+    border: 1px solid $strokeColor;
+    border-radius: 100px;
+    padding: 14px 14px 12px 25px;
+
+    &:focus{
+      outline: 2px solid $bannerHighlighted;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 22px;
+      color: $iconColor;
+    }
+  }
+
+  &__preloader {
+    height: 64px;
+    width: 64px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  &__list {
+    margin: 15px 0;
+    max-height: 224px;
+    overflow: auto;
+
+    scrollbar-width: thin;
+    /* "auto" или "thin"  */
+    scrollbar-color: #c0c0c0 #fbfbfb;
+    /* плашка скролла и дорожка */
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #fbfbfb;
+      /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #c0c0c0;
+      /* цвет плашки */
+      border-radius: 3px;
+    }
+
+    & .text-colored{
+      color: $activeAndConversionColor;
+    }
+  }
+
+  &__elem {
+    padding: 8px 0 10px 23px;
+    line-height: 22px;
+    cursor: pointer;
+
+    &.selected{
+      background-color: $grayOnWhite;
+    }
+
+    &:hover {
+      background-color: $grayOnWhite;
+    }
+  }
+
+  &__elem_dummy {
+    padding: 8px 0 10px 48px;
+    line-height: 22px;
+    color: $descriptorColor;
+  }
+
+  &__elem-subtext {
+    font-size: 12px;
+    line-height: 20px;
+    color: $descriptorColor;
+  }
+
+  &__btn {
+    padding: 16px 0;
+    border-top: 1px solid $strokeColor;
+    background: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: $iconColor;
+
+    &:hover{
+      opacity: 0.9;
+    }
+
+    &_colored {
+      background: $activeAndConversionColor;
+      color: #ffffff;
+    }
+  }
+}
+
+.cities-badges {
+  margin: 0 16px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 4px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: 1px solid $strokeColor;
+  }
+
+  &__elem {
+    position: relative;
+    color: #ffffff;
+    padding: 9px 40px 9px 16px;
+    background: $activeAndConversionColor;
+    border: 1px solid #d8d8d8;
+    border-radius: 100px;
+
+    &-text {
+      line-height: 22px
+    }
+
+    &-btn {
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: transparent url('./assets/images/closeWhite.svg') center no-repeat;
+    }
+  }
+}

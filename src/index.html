@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,45 +17,26 @@
     <header class="header">
       <div class="header__row">
 
-        <div class="cities-list hidden">
-          <input type="text" class="cities-list__input" placeholder="Регион, город, населенный пункт">
+        <div class="cities-popup hidden" id="cities-popup">
+          <label class="cities-popup__input-label hidden" id="cities-popup-input-label" for="cities-popup-input" ></label>
+          <input type="text" class="cities-popup__input" id="cities-popup-input"
+            placeholder="Регион, город, населенный пункт">
 
-          <div class="cities-selected">
-            <ul class="cities-selected__list">
+          <img src="./images/preloader.gif" class="cities-popup__preloader hidden" id="preloader" alt="preloader">
 
-              <li class="cities-selected__elem">
-                <span class="cities-selected__elem-text">Название</span>
-                <button class="cities-selected__elem-icon"></button>
-              </li>
+          <div class="cities-badges" id="cities-badges"></div>
 
-              <li class="cities-selected__elem">
-                <span class="cities-selected__elem-text">Название</span>
-                <button class="cities-selected__elem-icon"></button>
-              </li>
+          <ul class="cities-popup__list" id="cities-popup-list"></ul>
 
-            </ul>
-          </div>
-
-          <ul class="cities-list__list">
-            <li class="cities-list__elem">Московская область</li>
-            <li class="cities-list__elem">Вся Россия</li>
-            <li class="cities-list__elem">Санкт-Петербург</li>
-            <li class="cities-list__elem">Новосибирск</li>
-            <li class="cities-list__elem">Екатеринбург</li>
-          </ul>
-
-          <button class="cities-list__btn cities-list__btn_active">сохранить</button>
+          <button class="cities-popup__btn" id="cities-popup-btn">сохранить</button>
 
         </div>
 
-        <div class="header__menu-burger"></div>
+        <button class="header__menu-burger"></button>
 
         <object class="header__logo" data="./images/logo.svg" type="image/svg+xml"></object>
 
-        <p class="header__city">
-          <span class="header__city-img"></span>
-          <span class="header__city-text">Любой регион</span>
-        </p>
+        <button class="header__city" id="header-city"> Любой регион </button>
 
         <div class="header__search">
           <label class="header__search-img" for="search-input"></label>
@@ -63,11 +45,11 @@
         </div>
 
         <div class="header__favorites">
-          <span class="header__favorites-img"></span>
+          <button class="header__favorites-img"></button>
           <span class="header__favorites-text">1</span>
         </div>
 
-        <div class="header__profile">
+        <div class="header__profile" tabindex="0">
           <span class="header__profile-text">Дмитрий</span>
           <div class="header__profile-img">
             <img src="./images/foto.jpg" alt="foto">

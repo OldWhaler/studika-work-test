@@ -8,11 +8,7 @@
     display: none;
     width: 20px;
     height: 16px;
-    background-color: transparent;
-    background-image: url('./assets/images/menuBurger.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-
+    background: transparent url('./assets/images/menuBurger.svg') center no-repeat;
   }
 
   &__row {
@@ -35,20 +31,16 @@
     align-items: center;
     column-gap: 8px;
     margin-right: 4.5%;
-    cursor: pointer;
+    background: transparent;
+    line-height: 22px;
 
-    &-img {
+    &::before {
+      content: '';
+      display: block;
       min-width: 32px;
       width: 32px;
       height: 32px;
-      background-color: transparent;
-      background-image: url('./assets/images/city.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
-
-    &-text {
-      line-height: 22px;
+      background: transparent url('./assets/images/city.svg') center no-repeat;
     }
   }
 
@@ -66,11 +58,7 @@
       width: 17px;
       height: 17px;
       cursor: text;
-
-      background-color: transparent;
-      background-image: url('./assets/images/loupe.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
+      background: transparent url('./assets/images/loupe.svg') center no-repeat;
     }
 
     &-input {
@@ -104,9 +92,7 @@
       min-width: 15px;
       width: 15px;
       height: 14px;
-      background-color: transparent;
-      background-image: url('./assets/images/heart.svg');
-      background-repeat: no-repeat;
+      background: transparent url('./assets/images/heart.svg') center no-repeat;
     }
   }
 
@@ -114,13 +100,13 @@
     display: flex;
     align-items: center;
     column-gap: 7px;
+    
+    &:hover {
+      color: $descriptorColor;
+    }
 
     &-text {
       line-height: 22px;
-
-      &:hover {
-        color: $descriptorColor;
-      }
     }
 
     &-img {
